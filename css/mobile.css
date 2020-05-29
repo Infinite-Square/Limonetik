@@ -1,0 +1,415 @@
+@media only screen and (max-width: 1120px) {
+
+	input {
+		height: 50px;
+	}
+
+	.input_icon_wrapper {
+		height: 50px;
+	}
+
+	body {
+		background-color: unset;
+		width: 100vw;
+		height: auto;
+		margin: 0;
+	}
+
+	#main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#main-content {
+		width: 100vw;
+		height: auto;
+		border-radius: 6px;
+		background-color: white;
+	}
+
+	#main-wrapper,
+	#creditcard-form,
+	#creditcard-form-main,
+	#credit-card-form {
+		width: 100%;
+		height: auto;
+		margin-bottom: 0;
+	}
+
+	#credit-card-form {
+		flex-direction: column;
+		width: 100vw;
+		height: auto;
+		position: static;
+	}
+
+	#merchant_logo_container {
+		height: auto;
+		top: 60px;
+		left: 40px;
+		bottom: unset;
+		display: flex;
+		align-items: flex-start;
+	}
+
+	#cart_panel {
+		display: flex;
+		flex-direction: column;
+		background-color: #f8f8f8;
+		width: 100%;
+		padding: 129px 40px 40px 40px;
+		border-radius: 0;
+	}
+
+	#card_panel {
+		padding: var(--pane-top-padding) var(--card-left-right-padding);
+		width: 100%;
+	}
+
+	#cart_panel_title {
+		display: none;
+	}
+
+	#cart_panel_title_mobile {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 46px;
+		margin-bottom: 14px;
+	}
+
+	h5 {
+		font-size: 28px;
+		font-weight: 600;
+		color: #002945;
+		margin: 0px;
+	}
+
+	#cart_panel_title_mobile button,
+	#cart_panel_title_mobile button:focus,
+	#cart_panel_title_mobile button:hover {
+		width: 35px;
+		height: 35px;
+		border: 0;
+		background: none;
+		box-shadow: none;
+		outline: none;
+		border-radius: 50%;
+		background-color: #e8e8e8;
+		font-size: 20px;
+	}
+
+	#cart_panel_title_mobile button i {
+		margin-top: 2px;
+	}
+
+	#cart_detail {
+		display: none;
+	}
+
+	#total_descriptions {
+		display: none;
+		border: 0;
+	}
+
+	#cart_total_price {
+		border-top: 1px solid #e8e8e8;
+	}
+
+	#card_panel {
+		padding: 32px 40px;
+		overflow: hidden;
+	}
+
+	#payment_notice {
+		font-size: 18px;
+		line-height: 1.22;
+		margin: 8px 0 20px 0;
+	}
+
+	#cards_type_list {
+		display: flex;
+		margin-bottom: 30px;
+		justify-content: space-between;
+	}
+
+	#cards_type_list {
+		display: flex;
+		margin-bottom: 30px;
+		justify-content: space-between;
+	}
+
+	.card_logo_container {
+		margin: 0;
+	}
+
+	input {
+		width: 100%;
+	}
+
+	#card_date_cvv .input-wrapper {
+		width: calc(50% - 5px)
+	}
+
+	#card_date_cvv .input-wrapper .small_input {
+		width: 100%;
+	}
+
+	#save_card_wrapper span i {
+		margin-right: 10px;
+		font-size: 30px;
+	}
+
+	#save_card_wrapper span {
+		margin-right: 10px;
+	}
+
+	#save_card_wrapper p {
+		margin: 0px;
+		font-size: 18px;
+	}
+
+	#credit_card_submit_button {
+		font-size: 18px;
+		font-weight: 800;
+		height: 54px;
+		letter-spacing: 1.74px;
+	}
+
+	#total {
+		font-size: 18px;
+	}
+
+	#footer {
+		display: none;
+	}
+
+	#footer_mobile {
+		display: flex;
+		flex-direction: column;
+		font-size: 15px;
+		text-align: center;
+		color: #bababa;
+		height: auto;
+		align-items: center;
+
+	}
+
+	#footer_logo_container {
+		width: 170px;
+		height: auto;
+		margin-top: 15px;
+		margin-bottom: 30px;
+	}
+
+	#footer_logo_container img {
+		width: 100%;
+		height: auto;
+	}
+
+	#footer_mobile a:visited {
+		color: #bababa;
+	}
+
+	.tooltip .tooltiptext {
+		display: none;
+	}
+
+	#cvv_mobile_wrapper {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		height: 100vh;
+		width: 100vw;
+		background-color: rgba(0, 0, 0, 0.3);
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	#cvv_instruction_container {
+		background-color: white;
+		justify-content: flex-end;
+		position: relative;
+		padding: 36px 40px 34px 40px;
+	}
+
+	#cvv_instruction_container .title {
+		font-size: 20px;
+		font-weight: bold;
+		color: #333333;
+		margin: 0;
+	}
+
+	#cvv_instruction_container .desc {
+		font-size: 15px;
+		font-style: italic;
+		line-height: 1.27;
+		color: #808080;
+	}
+
+	#cvv_instruction_container .img-container {
+		width: 205px;
+	}
+
+	#cvv_instruction_container .img-container img {
+		width: 100%;
+		height: auto;
+	}
+
+	#close_cvv {
+		position: absolute;
+		top: 36px;
+		right: 20px;
+		font-size: 24px;
+		font-weight: 300;
+		color: #808080;
+	}
+
+	#global-form-error p {
+		margin: 0;
+		width: calc(100% - 2px - 38px)
+	}
+
+	.card-list-item {
+		width: 100%;
+		padding: 12px;
+		height: 85px;
+	}
+
+	.card-list-item i {
+		display: inline-block;
+	}
+
+	.card-list-item.active {
+		border: solid 2px #00c85f
+	}
+
+	.card-list-item.active .delete_btn {
+		display: none;
+	}
+
+	.card-list-item .delete_btn {
+		width: 60px;
+	}
+
+	.card-list-item .fa-trash-alt {
+		display: block;
+	}
+
+
+	.card-list-item .input-wrapper {
+		height: 50px;
+	}
+
+	.small_input {
+		height: 50px;
+	}
+
+	.delete_btn {
+		text-align: end;
+		padding-right: 10px;
+		color: #aeb1b4;
+		margin-right: 0;
+		margin-left: auto;
+	}
+
+	.card-list-item button {
+		display: none;
+	}
+
+	.card_data .card-list-item .card-nbr-date-wrapper p:nth-child(1) {
+		color: #333333;
+		margin: 0;
+		font-size: 16px;
+		width: 80px;
+		height: 20px;
+		overflow: hidden;
+	}
+
+	.card_data .card-list-item .card-nbr-date-wrapper p:nth-child(2) {
+		color: #aeb1b4;
+		font-size: 13px;
+		margin: 0;
+	}
+
+	.card-list-item .input-wrapper input {
+		width: 60px;
+		height: 50px;
+		border-radius: 6px;
+		border: solid 1px #e3e3e3;
+		padding: 0 7px;
+	}
+
+	.card-list-item .input-wrapper {
+		width: 60px;
+	}
+
+	.card-nbr-date-wrapper {
+		width: 125px;
+	}
+
+	.card-list-item .input_icon_wrapper {
+		right: 2px;
+	}
+
+	.card-list-item .card-type-wrapper {
+		width: 58px;
+		margin: 0 5px;
+		padding: 0;
+	}
+
+	#card-type-wrapper img {
+		height: 30px;
+		width: 45px;
+	}
+
+	#card-type-wrapper #card_picker {
+		height: 50px;
+	}
+
+	#card-type-wrapper {
+		height: 50px;
+	}
+
+	#card-type-wrapper #card-list {
+		height: 90px;
+		width: 57px;
+		padding: 10px 3px 5px 3px;
+		z-index: 1;
+	}
+
+	#cvv_input_wrapper .input_icon_wrapper {
+		width: 20px;
+	}
+
+}
+
+@media only screen and (max-width : 350px) {
+	h5 {
+		font-size: 22px;
+	}
+
+	.card_logo_container {
+		width: 55px;
+	}
+
+	.card-list-item {
+		padding: 8px;
+	}
+
+	#footer_mobile {
+		font-size: 13px;
+	}
+
+	#save_card_wrapper p {
+		font-size: 15px;
+	}
+
+	#card_panel {
+		padding: 20px;
+	}
+}

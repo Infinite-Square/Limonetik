@@ -1,0 +1,266 @@
+<html>
+
+<head>
+	<title>qualif - EB-SBWEB01 - Page de paiement</title>
+
+
+
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/x-icon">
+	<link rel="icon" type="image/x-icon">
+
+
+	<link rel="apple-touch-icon" href="https://pps-static.limonetikqualif.com/Content/Images/dummy.png">
+	<link rel="apple-touch-icon-precomposed" href="https://pps-static.limonetikqualif.com/Content/Images/dummy.png">
+
+
+
+	<!-- Dependances -->
+	<link rel="stylesheet" type="text/css" href="css/forms.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+		rel="stylesheet">
+	<link href="css/all.css" rel="stylesheet">
+	</link>
+	<script src="js/lib/input-mask.js"></script>
+	<!-- Dependances -->
+
+
+	<script
+		src="https://pps-static.limonetikqualif.com/PaymentPrograms/External/GenericCreditCard/Content/Scripts/CustomJsAndLib?v=yTjdPcWI7Kzz34aKqKsalTfTb_nu5kjq6AcgR55y9eo1">
+	</script>
+
+
+</head>
+
+<body>
+
+	<div id="main-container">
+
+		<div id="main-header">
+
+		</div>
+
+		<div class="wrapper">
+
+			<div id="main-content" style="display: block;">
+				<div id="main-wrapper" class="container">
+					<div id="creditcard-form" class="block">
+						<div class="block-above" id="creditcard-form-above">
+
+						</div>
+						<section class="block-main" id="creditcard-form-list">
+							<form action="/" class="form grid-base" data-ajax="true"
+								data-ajax-failure="lmk.pps.handleAjaxResponse" data-ajax-method="POST"
+								data-ajax-success="lmk.pps.handleAjaxResponse"
+								data-ajax-url="/GenericCreditCard/Order/SubmitCreditCardForm/119214412696"
+								id="credit-card-form" method="post">
+								<div id="merchant_logo_container">
+									<img id="merchant_logo" src="assets/logo-merchant-ex.png">
+								</div>
+
+								<div id="cart_panel">
+									<h5 id="cart_panel_title">Récapitulatif</h5>
+									<div id="cart_panel_title_mobile">
+										<h5>Votre commande</h5>
+										<button id="toggle_cart_details" type="button">
+											<i id="cart_icon_down" class="far fa-angle-down"></i>
+											<i id="cart_icon_up" class="far fa-angle-up hidden"></i>
+										</button>
+									</div>
+
+									<div id="cart_detail">
+										<div class="cart-item">
+											<div class="item-identification">
+												<p class="cart_item_label">Book title</p>
+												<p class="cart_item_desc">Book description</p>
+											</div>
+											<p class="cart_item_price">5,00 €</p>
+										</div>
+										<div class="cart-item">
+											<div class="item-identification">
+												<p class="cart_item_label">Book title</p>
+												<p class="cart_item_desc">Book description</p>
+											</div>
+											<p class="cart_item_price">5,00 €</p>
+										</div>
+										<div class="cart-item">
+											<div class="item-identification">
+												<p class="cart_item_label">Book title</p>
+												<p class="cart_item_desc">Book description</p>
+											</div>
+											<p class="cart_item_price">5,00 €</p>
+										</div>
+
+									</div>
+
+									<div id="cart_total">
+										<div id="total_descriptions">
+											<div id="sub_total">
+												<p>Sous Total</p>
+												<p>330,00 €</p>
+											</div>
+											<div id="tva">
+												<p>TVA (20%)</p>
+												<p>66,00 €</p>
+											</div>
+											<div id="shipping_fees">
+												<p>Frais de port</p>
+												<p>10,00 €</p>
+											</div>
+
+										</div>
+										<div id="cart_total_price">
+											<div id="cart_total_labels">
+												<p id="total">Total</p>
+												<p id="total_info_label">dont TVA 20%</p>
+											</div>
+											<p id="total_value">403,00 €</p>
+										</div>
+									</div>
+
+
+
+								</div>
+								<div id="card_panel">
+									<h5>Méthode de paiement</h5>
+									<p id="payment_notice">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+									</p>
+									<p id="select_card_label">Sélectionner une carte</p>
+									<div class="card_data">
+
+										<div class="card-list-item active">
+											<div class="radio-box"></div>
+											<div class="card-type-wrapper"><img src="assets/logo-CB.svg"></div>
+											<div class="card-nbr-date-wrapper">
+												<p>3241 **** **** ****</p>
+												<p>Expire le 11/21</p>
+											</div>
+											<div id="cvv_input_wrapper" class="input-wrapper">
+												<input class="small_input" value="" placeholder="CVV" autocomplete="off"
+													id="credit_card_security_code" name="SecurityCode" type="text">
+												<div id="cvv_icon" class="input_icon_wrapper">
+													<i class="far fa-info-circle tooltip">
+														<span class="tooltiptext">
+															<div class="tooltip-arrow"></div>
+															<p class="title">Où trouver le CVV ?</p>
+															<p class="desc">Lorem ipsum dolor sit amet, consectetur
+																adipisicing elit, sed</p>
+															<div class="img-container">
+																<img src="assets/cvv.png">
+															</div>
+														</span>
+													</i>
+												</div>
+											</div>
+											<!-- Not plugged to anything Yet-->
+											<div class="delete_btn">
+												<button>Supprimer</button>
+												<i class="far fa-trash-alt"></i>
+											</div>
+
+										</div>
+
+										<div class="card-list-item">
+											<div class="radio-box"></div>
+											<div class="card-type-wrapper"><img src="assets/logo-MasterCard.svg"></div>
+											<div class="card-nbr-date-wrapper">
+												<p>1234 **** **** ****</p>
+												<p>Expire le 11/22</p>
+											</div>
+											<!-- Not plugged to anything -->
+											<div class="delete_btn">
+												<button>Supprimer</button>
+												<i class="far fa-trash-alt"></i>
+											</div>
+										</div>
+
+
+										<!-- Always hidden - Selected card - Order of radio button match order of cards in list-->
+										<input class="card-radio-input hidden" type="radio" name="card" value="X"
+											checked>
+										<input class="card-radio-input hidden" type="radio" name="card" value="Y">
+
+
+										<p id="add_new_card">
+											<a href="page_1.html">
+												<i class="far fa-plus"></i> Ajouter une nouvelle carte
+											</a>
+										</p>
+										<!-- Displayed if following function is called :
+											 function displayFormError(errorMessage = "Une erreur est survenue veuillez réessayer") -->
+										<div id="global-form-error" class="hidden">
+											<div id="close-error">
+												<i class="far fa-times"></i>
+											</div>
+										</div>
+
+										<div id="cvv_mobile_wrapper" class="hidden">
+											<div id="cvv_instruction_container">
+												<i id="close_cvv" class="far fa-times"></i>
+												<p class="title">Où trouver le CVV ?</p>
+												<p class="desc">Lorem ipsum dolor sit amet, consectetur
+													adipisicing elit, sed</p>
+												<div class="img-container">
+													<img src="assets/cvv.png">
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+									<button id="credit_card_submit_button" type="submit" class="keepMandateButton"
+										disabled>Payer
+										406,00 € TTC</button>
+
+								</div>
+							</form>
+						</section>
+						<div class="block-under" id="creditcard-form-under"></div>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="footer">
+				<div id="footer_logo_container">
+					<img src="assets/limonetik-logo-reverse-rgb.svg">
+				</div>
+
+				<div id="legal_notices">
+					<a href="https://www.limonetik.com/?lang=fr">Mentions légales</a> | <a
+						href="https://www.limonetik.com/?lang=fr">CGU</a> | Limonetik &copy; 2020
+				</div>
+			</div>
+
+			<div id="footer_mobile">
+				<div id="legal_notices">
+					<a href="https://www.limonetik.com/?lang=fr">Mentions légales</a> | <a
+						href="https://www.limonetik.com/?lang=fr">CGU</a> | Limonetik &copy; 2020
+				</div>
+				<div id="footer_logo_container">
+					<img src="assets/limonetik_mobile.png">
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Dependances -->
+	<script type="text/javascript" src="js/card-list-form.js"></script>
+	<!-- Dependances -->
+
+</body>
+
+</html>

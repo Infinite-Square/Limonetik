@@ -1,0 +1,100 @@
+@media only screen and (max-width: 1120px) {
+
+	body {
+		background-color: unset;
+		width: 100vw;
+		height: auto;
+		margin: 0;
+	}
+
+	#main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#main-content {
+		width: 100vw;
+		height: auto;
+		border-radius: 6px;
+		background-color: white;
+		padding: 60px 40px 40px 40px;
+	}
+
+	#main-wrapper,
+	#creditcard-form,
+	#creditcard-form-main,
+	#credit-card-form {
+		width: 100%;
+		height: auto;
+		margin-bottom: 0;
+	}
+
+	#credit-card-form {
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+		position: static;
+	}
+
+	#merchant_logo_container {
+		height: auto;
+		top: 60px;
+		left: 40px;
+		bottom: unset;
+		display: flex;
+		align-items: flex-start;
+	}
+
+	h5 {
+		font-size: 28px;
+	}
+
+	#footer {
+		display: none;
+	}
+
+	#footer_mobile {
+		display: flex;
+		flex-direction: column;
+		font-size: 15px;
+		text-align: center;
+		color: #bababa;
+		height: auto;
+		align-items: center;
+
+	}
+
+	#footer_logo_container {
+		width: 170px;
+		height: auto;
+		margin-top: 15px;
+		margin-bottom: 30px;
+	}
+
+	#footer_logo_container img {
+		width: 100%;
+		height: auto;
+	}
+
+	#footer_mobile a:visited {
+		color: #bababa;
+	}
+
+	#confirmation_img_wrapper #mobile-img {
+		display: block;
+	}
+
+	#confirmation_img_wrapper {
+		display: block;
+		margin-bottom: 45px;
+		width: 100%;
+	}
+
+	#confirmation_img_wrapper #desktop-img {
+		display: none;
+	}
+
+}

@@ -1,0 +1,745 @@
+/* ---------------------- Globals ---------------------- */
+/* ---------------------- ------- ---------------------- */
+* {
+	box-sizing: border-box;
+	font-family: 'Muli', sans-serif;
+
+	--card-left-right-padding: 99px;
+	--cart-left-right-padding: 80px;
+
+	--pane-top-padding: 162px;
+
+	--total-width: 1114px;
+	--total-height: 748px;
+
+	--cart-width: 451px;
+	--card-width: 663px;
+
+	--merchant-logo-width: 200px;
+	--merchant-logo-height: 100px;
+
+	--input-height: 38px;
+}
+
+body {
+	background-color: #002945;
+	width: 100vw;
+	height: 100vh;
+}
+
+#main-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#main-content {
+	width: var(--total-width);
+	height: var(--total-height);
+	border-radius: 6px;
+	background-color: white;
+}
+
+#main-wrapper,
+#creditcard-form,
+#creditcard-form-main,
+#credit-card-form {
+	width: 100%;
+	height: 100%;
+}
+
+#credit-card-form {
+	display: flex;
+	flex-direction: row-reverse;
+	position: relative;
+}
+
+h5 {
+	font-size: 20px;
+	font-weight: 600;
+	color: #002945;
+	margin: 0 0 20px 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input:focus {
+	outline: #002945 auto 1px;
+}
+
+a {
+	text-decoration: unset;
+}
+
+a:visited {
+	color: white;
+}
+
+#credit_card_submit_button {
+	border: 0;
+	background: none;
+	box-shadow: none;
+}
+
+#credit_card_submit_button:focus {
+	outline: none;
+	border: none;
+}
+
+
+#credit_card_submit_button:hover {
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+
+
+/* ---------------------- Cart ----------------------*/
+/* ------------------------------------------------- */
+
+#cart_panel {
+	display: flex;
+	flex-direction: column;
+	background-color: #f8f8f8;
+	height: 100%;
+	width: var(--cart-width);
+	padding: var(--pane-top-padding) var(--cart-left-right-padding) 0px var(--cart-left-right-padding);
+	border-radius: 6px;
+}
+
+#merchant_display_name {
+	display: none;
+}
+
+#cart_panel_title {
+	margin: 0 0 26px 0;
+}
+
+#cart_panel_title_mobile {
+	display: none;
+}
+
+#cart_detail {
+	border-bottom: 1px solid #e8e8e8;
+	padding: 0 0 6px 0;
+}
+
+.cart-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 0 17px 0;
+}
+
+.cart-item p {
+	margin: 0;
+}
+
+.cart_item_price {
+	font-size: 14px;
+	font-weight: 600;
+	color: #333333;
+}
+
+.item-identification {
+	max-width: 200px;
+	text-overflow: ellipsis;
+}
+
+.item-identification p:nth-child(1) {
+	font-size: 14px;
+	font-weight: bold;
+	color: #333333;
+	margin: 0 0 2px 0;
+}
+
+.item-identification p:nth-child(2) {
+	font-size: 13px;
+	font-weight: 600;
+	color: #989898;
+}
+
+#total_descriptions {
+	padding: 18px 0;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+#total_descriptions p {
+	margin: 0;
+}
+
+#total_descriptions div {
+	display: flex;
+	justify-content: space-between;
+}
+
+#total_descriptions div p {
+	font-size: 14px;
+	font-weight: bold;
+	color: #333333;
+}
+
+#total_descriptions div:nth-child(1),
+#total_descriptions div:nth-child(2) {
+	margin-bottom: 13px;
+}
+
+#cart_total_price {
+	padding-top: 18px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#cart_total_price p {
+	margin: 0;
+}
+
+#total {
+	font-size: 16px;
+	font-weight: bold;
+	color: #002945;
+}
+
+#total_info_label {
+	font-size: 14px;
+	font-style: italic;
+	color: #989898;
+	margin-top: 6px;
+}
+
+#total_value {
+	font-size: 24px;
+	font-weight: bold;
+	color: #002945;
+}
+
+
+/* ---------------------- Card ----------------------*/
+/* ------------------------------------------------- */
+
+#card_panel {
+	padding: var(--pane-top-padding) var(--card-left-right-padding);
+	width: var(--card-width);
+}
+
+#merchant_logo_container {
+	width: var(--merchant-logo-width);
+	height: var(--merchant-logo-height);
+	position: absolute;
+	left: var(--card-left-right-padding);
+	bottom: 616px;
+	display: flex;
+	align-items: flex-end;
+}
+
+#merchant_logo {
+	max-width: 100%;
+	height: auto;
+}
+
+#payment_notice {
+	font-size: 14px;
+	line-height: 1.36;
+	color: #929292;
+	visibility: visible;
+	margin-bottom: 20px;
+	height: 38px;
+}
+
+#cards_type_list {
+	display: flex;
+	margin-bottom: 30px;
+}
+
+.card_logo_container {
+	width: 62px;
+	height: 41px;
+	margin-right: 29px;
+}
+
+.card_logo {
+	width: 100%;
+	height: 41px;
+}
+
+#card-data {
+	position: relative;
+}
+
+input {
+	width: 466px;
+	height: var(--input-height);
+	border-radius: 6px;
+	border: solid 1px #e3e3e3;
+	margin-bottom: 30px;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	padding: 0 10px;
+	color: #333333;
+}
+
+input::placeholder {
+	color: #606060;
+	font-weight: 600;
+}
+
+.input-wrapper {
+	position: relative;
+}
+
+.input-wrapper p {
+	position: absolute;
+	top: -16px;
+	margin: 0;
+	right: 0;
+	font-size: 10px;
+	font-weight: 600;
+	font-style: italic;
+	color: #ca7070;
+}
+
+.input_icon_wrapper {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: var(--input-height);
+	height: var(--input-height);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.input_icon_wrapper i {
+	position: relative;
+	font-size: 16px;
+	color: #00c85f;
+	top: 1px;
+}
+
+.input_icon_wrapper #error_icon_card_nbr,
+.input_icon_wrapper #error_icon_card_date {
+	color: #ca7070;
+}
+
+#card-type-wrapper {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: var(--input-height);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	flex-wrap: wrap;
+}
+
+#card-type-wrapper #card-list {
+	display: flex;
+	flex-direction: column;
+	height: 69px;
+	justify-content: space-between;
+	width: 50px;
+	padding: 7px 3px;
+	margin-top: 1px;
+	z-index: 0;
+	align-items: center;
+}
+
+#amex,
+#mc {
+	margin-right: 5px;
+}
+
+#card-type-wrapper #card-list.cb {
+	flex-direction: column-reverse;
+}
+
+#card-type-wrapper #card-list.active {
+	border: solid 1px #e3e3e3;
+	background-color: white;
+	margin-top: 0;
+}
+
+#card-type-wrapper.active {
+	overflow: visible;
+}
+
+#card-type-wrapper img {
+	height: 23px;
+	width: 36px;
+}
+
+#card-type-wrapper #card_picker {
+	height: 38px;
+	width: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 21px;
+	color: #333333;
+	align-self: flex-start;
+}
+
+#card_picker i {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+#card_date_cvv {
+	display: flex;
+	justify-content: space-between;
+}
+
+.small_input {
+	width: 221px;
+}
+
+#save_card_wrapper {
+	display: flex;
+}
+
+#save_card_wrapper p {
+	font-size: 12px;
+	color: #333333;
+	margin: 0;
+}
+
+#save_card_wrapper span {
+	height: 36px;
+	width: 36px;
+}
+
+#save_card_wrapper i {
+	font-size: 20px;
+	color: #00c85f;
+}
+
+
+#global-form-error {
+	display: flex;
+	flex-direction: row-reverse;
+	width: 100%;
+	border-radius: 6px;
+	border: solid 1px #ca7070;
+	background-color: #ca7070;
+	margin-top: 20px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#global-form-error p {
+	margin: 0;
+	padding: 10px;
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: 0.46px;
+	color: #ffffff;
+	background-color: rgb(224, 172, 172);
+}
+
+#global-form-error #close-error {
+	width: var(--input-height);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+#credit_card_submit_button {
+	width: 100%;
+	height: var(--input-height);
+	border-radius: 6px;
+	background-color: #002945;
+	font-size: 14px;
+	font-weight: 800;
+	letter-spacing: 0.5px;
+	text-align: center;
+	color: #ffffff;
+	margin-top: 20px;
+	text-transform: uppercase;
+}
+
+#credit_card_submit_button.grey {
+	background-color: #eaeaea;
+	color: #aaaaaa;
+}
+
+#credit_card_submit_button.valid {
+	background-color: #00c85f;
+}
+
+/* ---------------------- Card List Only ----------------------*/
+/* --------------------------------------------------- */
+#select_card_label {
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	color: #a2a2a2;
+	text-transform: uppercase;
+	margin-bottom: 0px;
+}
+
+.card-list-item {
+	margin-top: 9px;
+	width: 466px;
+	height: 67px;
+	border-radius: 6px;
+	border: solid 1px #e3e3e3;
+	display: flex;
+	align-items: center;
+	padding: 12px;
+	cursor: pointer;
+}
+
+.card-list-item.active {
+	border: solid 1px #00c85f;
+}
+
+.card-list-item.active .radio-box {
+	border: solid 5px #00c85f;
+}
+
+.card-type-wrapper {
+	width: 74px;
+	height: 35px;
+	padding: 0 10px;
+}
+
+.card-type-wrapper img {
+	width: 100%;
+	height: 35px;
+}
+
+
+.radio-box {
+	width: 19px;
+	height: 19px;
+	border: solid 2px #b4b4b4;
+	border-radius: 50%;
+
+}
+
+.card-list-item .input-wrapper {
+	width: 76px;
+	height: 38px;
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.card-list-item .input-wrapper input {
+	width: 76px;
+	height: 38px;
+	border-radius: 6px;
+	border: solid 1px #e3e3e3;
+
+}
+
+.card-list-item .fa-trash-alt {
+	display: none;
+}
+
+.card-list-item button,
+.card-list-item button:focus,
+.card-list-item button:hover {
+
+	border: none;
+	outline: none;
+	box-shadow: none;
+	background-color: white;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.43px;
+	color: #aeb1b4;
+	width: 90px;
+	height: 100%;
+	padding: 0;
+	cursor: pointer;
+}
+
+.delete_btn {
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.card-nbr-date-wrapper {
+	height: 100%;
+	width: 138px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.card-nbr-date-wrapper p {
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	margin: 0;
+}
+
+.card-nbr-date-wrapper p:nth-child(1) {
+	color: #333333;
+}
+
+.card-nbr-date-wrapper p:nth-child(2) {
+	color: #aeb1b4;
+}
+
+.card_data #add_new_card {
+	color: #00c85f;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	color: #00c85f;
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+.card_data #add_new_card a,
+.card_data #add_new_card a:visited {
+	color: #00c85f;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	color: #00c85f;
+	text-decoration: unset;
+}
+
+
+
+
+/* ---------------------- CVV tooltip ----------------------*/
+/* --------------------------------------------------- */
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	/* If you want dots under the hoverable text */
+}
+
+.tooltip-arrow {
+	position: absolute;
+	top: 28px;
+	left: -6px;
+	background-color: white;
+	transform: rotate(45deg);
+	width: 10px;
+	height: 10px;
+	border-left: 1px solid rgba(0, 0, 0, 0.12);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+	visibility: hidden;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	top: -25px;
+	position: absolute;
+	z-index: 1;
+	margin-left: 40px;
+	width: 168px;
+	height: 157px;
+	border-radius: 6px;
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.27);
+	background-color: #ffffff;
+	padding: 18px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+
+
+}
+
+.input-wrapper .input_icon_wrapper .tooltip .tooltiptext .title {
+	position: relative;
+	font-size: 11px;
+	font-weight: bold;
+	color: #002945;
+	text-align: left;
+	top: 0px;
+	font-style: normal;
+}
+
+.input-wrapper .input_icon_wrapper .tooltip .tooltiptext .desc {
+	position: relative;
+	font-size: 9px;
+	font-style: italic;
+	font-weight: normal;
+	color: #606060;
+	text-align: left;
+	top: 0px;
+}
+
+.tooltip:hover .tooltiptext .img-container {
+	width: 128px
+}
+
+.tooltip:hover .tooltiptext .img-container img {
+	width: 100%;
+}
+
+
+/* ---------------------- Footer ----------------------*/
+/* --------------------------------------------------- */
+
+#footer {
+	display: flex;
+	justify-content: space-between;
+	color: white;
+	font-size: 12px;
+	margin-top: 10px;
+}
+
+#footer_mobile {
+	display: none;
+}
+
+#footer_logo_container {
+	height: 22px;
+}
+
+#footer_logo_container img {
+	height: 100%;
+	width: auto;
+}
+
+
+/* ---------------------- Miscellaneous ----------------------*/
+/* ---------------------------------------------------------- */
+
+#pay_merchant_display_name {
+	display: none;
+}
+
+#lmk-pps-en-bar {
+	display: none !important;
+}
+
+
+.hidden {
+	display: none !important;
+}

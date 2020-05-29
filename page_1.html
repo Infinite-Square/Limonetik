@@ -1,0 +1,279 @@
+<html>
+
+<head>
+	<title>qualif - EB-SBWEB01 - Page de paiement</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/x-icon">
+	<link rel="icon" type="image/x-icon">
+
+
+	<!-- Dependances -->
+	<link rel="stylesheet" type="text/css" href="css/forms.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+		rel="stylesheet">
+	<link href="css/all.css" rel="stylesheet">
+	</link>
+	<script src="js/lib/input-mask.js"></script>
+	<!-- Dependances -->
+
+
+	<script
+		src="https://pps-static.limonetikqualif.com/PaymentPrograms/External/GenericCreditCard/Content/Scripts/CustomJsAndLib?v=yTjdPcWI7Kzz34aKqKsalTfTb_nu5kjq6AcgR55y9eo1">
+	</script>
+
+
+</head>
+
+<body>
+
+	<div id="main-container">
+
+		<div id="main-header">
+
+		</div>
+
+		<div class="wrapper">
+
+			<div id="main-content" style="display: block;">
+				<div id="main-wrapper" class="container">
+					<div id="creditcard-form" class="block">
+						<div class="block-above" id="creditcard-form-above">
+
+						</div>
+						<section class="block-main" id="creditcard-form-main">
+							<form action="/" class="form grid-base" data-ajax="true"
+								data-ajax-failure="lmk.pps.handleAjaxResponse" data-ajax-method="POST"
+								data-ajax-success="lmk.pps.handleAjaxResponse"
+								data-ajax-url="/GenericCreditCard/Order/SubmitCreditCardForm/119214412696"
+								id="credit-card-form" method="post">
+								<div id="merchant_logo_container">
+									<img id="merchant_logo" src="assets/logo-merchant-ex.png">
+								</div>
+
+								<div id="cart_panel">
+									<h5 id="cart_panel_title">Récapitulatif</h5>
+									<div id="cart_panel_title_mobile">
+										<h5>Votre commande</h5>
+										<button id="toggle_cart_details" type="button">
+											<i id="cart_icon_down" class="far fa-angle-down"></i>
+											<i id="cart_icon_up" class="far fa-angle-up hidden"></i>
+										</button>
+									</div>
+
+									<div id="cart_detail">
+										<div class="cart-item">
+											<div class="item-identification">
+												<p class="cart_item_label">Book title</p>
+												<p class="cart_item_desc">Book description</p>
+											</div>
+											<p class="cart_item_price">5,00 €</p>
+										</div>
+										<div class="cart-item">
+											<div class="item-identification">
+												<p class="cart_item_label">Book title</p>
+												<p class="cart_item_desc">Book description</p>
+											</div>
+											<p class="cart_item_price">5,00 €</p>
+										</div>
+										<div class="cart-item">
+											<div class="item-identification">
+												<p class="cart_item_label">Book title</p>
+												<p class="cart_item_desc">Book description</p>
+											</div>
+											<p class="cart_item_price">5,00 €</p>
+										</div>
+
+									</div>
+
+									<div id="cart_total">
+										<div id="total_descriptions">
+											<div id="sub_total">
+												<p>Sous Total</p>
+												<p>330,00 €</p>
+											</div>
+											<div id="tva">
+												<p>TVA (20%)</p>
+												<p>66,00 €</p>
+											</div>
+											<div id="shipping_fees">
+												<p>Frais de port</p>
+												<p>10,00 €</p>
+											</div>
+										</div>
+										<div id="cart_total_price">
+											<div id="cart_total_labels">
+												<p id="total">Total</p>
+												<p id="total_info_label">dont TVA 20%</p>
+											</div>
+											<p id="total_value">403,00 €</p>
+										</div>
+									</div>
+
+
+
+								</div>
+								<div id="card_panel">
+									<h5>Méthode de paiement</h5>
+									<p id="payment_notice">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+									</p>
+									<div id="cards_type_list">
+										<div class="card_logo_container">
+											<img class="card_logo" src="assets/logo-Amex.svg" />
+										</div>
+										<div class="card_logo_container">
+											<img class="card_logo" src="assets/logo-CB.svg" />
+										</div>
+										<div class="card_logo_container">
+											<img class="card_logo" src="assets/logo-MasterCard.svg" />
+										</div>
+										<div class="card_logo_container">
+											<img class="card_logo" src="assets/logo-Visa.svg" />
+										</div>
+									</div>
+									<div class="card_data">
+
+										<input value="" placeholder="Nom Prenom" autocomplete="off"
+											id="credit_card_owner_name" name="Name" type="text">
+
+										<div class="input-wrapper">
+											<p id="card_nbr_error" class="hidden">Ce champs n'est pas valide</p>
+											<input value="" placeholder="1234 5678 1234 5678" autocomplete="off"
+												id="credit_card_number" name="Number" type="text">
+											<div class="input_icon_wrapper">
+												<i id="lock_icon" class="far fa-lock"></i>
+												<i id="error_icon_card_nbr"
+													class="fas fa-exclamation-circle hidden"></i>
+											</div>
+											<div id="card-type-wrapper" class="hidden">
+												<img id="amex" src="assets/logo-Amex.svg" class="hidden">
+												<img id="mc" src="assets/logo-MasterCard.svg" class="hidden">
+												<div id="card-list" class="hidden">
+													<img id="visa" src="assets/logo-Visa.svg">
+													<img id="cb" src="assets/logo-CB.svg">
+												</div>
+												<div id="card_picker" class="hidden">
+													<i id="picker_icon_down" class="fal fa-angle-down"></i>
+													<i id="picker_icon_up" class="fal fa-angle-up hidden"></i>
+												</div>
+											</div>
+										</div>
+
+										<input id="card_type_input" type="text" class="hidden">
+
+										<div id="card_date_cvv">
+											<div class="input-wrapper">
+												<p id="card_date_error" class="hidden">Date invalide</p>
+												<input class="small_input" value="" placeholder="MM/AA"
+													autocomplete="off" id="credit_card_expiration_date"
+													name="ExpirationDate" type="text">
+												<div class="input_icon_wrapper">
+													<i id="error_icon_card_date"
+														class="fas fa-exclamation-circle hidden"></i>
+												</div>
+											</div>
+
+
+											<div class="input-wrapper">
+												<input class="small_input" value="" placeholder="CVV" autocomplete="off"
+													id="credit_card_security_code" name="SecurityCode" type="text">
+												<div id="cvv_icon" class="input_icon_wrapper">
+													<i class="far fa-info-circle tooltip">
+														<span class="tooltiptext">
+															<div class="tooltip-arrow"></div>
+															<p class="title">Où trouver le CVV ?</p>
+															<p class="desc">Lorem ipsum dolor sit amet, consectetur
+																adipisicing elit, sed</p>
+															<div class="img-container">
+																<img src="assets/cvv.png">
+															</div>
+														</span>
+													</i>
+												</div>
+											</div>
+										</div>
+
+										<input type="checkbox" id="save_card" name="SaveCard" checked hidden>
+										<div id="save_card_wrapper">
+											<span id="toggle-off" class="hidden"><i
+													class="far fa-toggle-off"></i></span>
+											<span id="toggle-on"><i id="toggle-on" class="far fa-toggle-on"></i></span>
+											<p>Je souhaite enregistrer mes données de paiement en utilisant un cryptage
+												de qualité bancaire. </p>
+										</div>
+
+										<!-- Displayed if following function is called :
+											 function displayFormError(errorMessage = "Une erreur est survenue veuillez réessayer") -->
+										<div id="global-form-error" class="hidden">
+											<div id="close-error">
+												<i class="far fa-times"></i>
+											</div>
+										</div>
+
+										<div id="cvv_mobile_wrapper" class="hidden">
+											<div id="cvv_instruction_container">
+												<i id="close_cvv" class="far fa-times"></i>
+												<p class="title">Où trouver le CVV ?</p>
+												<p class="desc">Lorem ipsum dolor sit amet, consectetur
+													adipisicing elit, sed</p>
+												<div class="img-container">
+													<img src="assets/cvv.png">
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+									<button id="credit_card_submit_button" type="submit" class="keepMandateButton"
+										disabled>Payer
+										406,00 € TTC</button>
+
+								</div>
+							</form>
+						</section>
+						<div class="block-under" id="creditcard-form-under"></div>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="footer">
+				<div id="footer_logo_container">
+					<img src="assets/limonetik-logo-reverse-rgb.svg">
+				</div>
+
+				<div id="legal_notices">
+					<a href="https://www.limonetik.com/?lang=fr">Mentions légales</a> | <a
+						href="https://www.limonetik.com/?lang=fr">CGU</a> | Limonetik &copy; 2020
+				</div>
+			</div>
+
+			<div id="footer_mobile">
+				<div id="legal_notices">
+					<a href="https://www.limonetik.com/?lang=fr">Mentions légales</a> | <a
+						href="https://www.limonetik.com/?lang=fr">CGU</a> | Limonetik &copy; 2020
+				</div>
+				<div id="footer_logo_container">
+					<img src="assets/limonetik_mobile.png">
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Dependances -->
+	<script type="text/javascript" src="js/form.js"></script>
+	<!-- Dependances -->
+
+</body>
+
+</html>
